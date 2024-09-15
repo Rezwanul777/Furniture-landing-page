@@ -3,6 +3,7 @@ import Choose from "./Choose"
 import Experiences from "./Experiences"
 import Hero from "./Hero"
 import Materials from "./Materials"
+import Testimonial from "./Testimonial"
 
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
       <Products headline="Best Selling Prpducts"/>
       <Experiences/>
       <Materials/>
+      <Testimonial/>
     </div>
   )
 }
