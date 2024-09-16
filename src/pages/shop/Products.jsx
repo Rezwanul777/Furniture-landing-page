@@ -4,6 +4,7 @@ import { useState } from "react";
 import { products } from "../../utils/products";
 import ProductCard from "./ProductCard";
 import btnIcon from "../../assets/button-icon.png"
+import Reveal from "../../animation/Reveal";
 
 const Products = ({ headline }) => {
   const categories = ["Chair", "Beds", "Sofa", "Lamp"];
@@ -27,6 +28,7 @@ const Products = ({ headline }) => {
         <h2 className="font-bold text-4xl text-center my-8">{headline}</h2>
         {/* {catagories} */}
         <div className="bg-[#EEEEEE] max-w-md mx-auto sm:rounded-full md:p-2.5 py-5 mb-16">
+          <Reveal>
           <div className="flex flex-col sm:flex-row items-center md:justify-between justify-center gap-4">
             {categories.map((category) => (
               <button
@@ -42,15 +44,18 @@ const Products = ({ headline }) => {
               </button>
             ))}
           </div>
+          </Reveal>
         </div>
         {/* Products Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+       <Reveal>
+       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {
           filteredProducts.slice(0,visibleProducts).map((product, index) => (
             <ProductCard key={index} product={product} />
           ))
           }
         </div>
+       </Reveal>
         {/* Load More Button */}
         {visibleProducts < filteredProducts.length && (
           <div className="flex justify-center items-center mt-8">

@@ -1,6 +1,8 @@
+import NumberCounter from "../../components/NumberCounter"
 import Products from "../shop/Products"
 import Choose from "./Choose"
 import Experiences from "./Experiences"
+
 import Hero from "./Hero"
 import Materials from "./Materials"
 import Testimonial from "./Testimonial"
@@ -14,7 +16,9 @@ const Home = () => {
       <Products headline="Best Selling Prpducts"/>
       <Experiences/>
       <Materials/>
+      <NumberCounter/> 
       <Testimonial/>
+      
     </div>
   )
 }
